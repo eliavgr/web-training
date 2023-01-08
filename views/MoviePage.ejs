@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>MoviePage</title>
+  <link rel='stylesheet' href='/stylesheets/StyleMovie.css' />
+
+</head>
+
+
+<body>
+  <div class="page">
+
+    <h1>Movie Page</h1><br />
+      <table>
+        <tr>
+          <td>id</td>
+          <td>
+            <%= movie.id %>
+          </td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>
+            <%= movie.name %>
+          </td>
+        </tr>
+        <tr>
+          <td>genras</td>
+          <td>
+            <%= movie.genres %>
+          </td>
+        </tr>
+        <tr>
+          <td>language</td>
+          <td>
+            <%= movie.language %>
+          </td>
+        </tr>
+        <tr>
+          <td>link</td>
+          <td>
+            <a href="<%= movie.url %>"><%= movie.url %></a>
+          </td>
+        </tr>
+      </table>
+      <% if(movie.image) { %>
+        <img src=<%=movie.image.medium %> style="width: 100px;"><br /><br />
+        <% } %>
+    <div class="backLinks">   
+      <a href="/SearchResultPage">back to result</a>
+      <a href="/MenuPage">back to menu</a>
+    </div>
+
+  </div>
+</body>
+
+</html>

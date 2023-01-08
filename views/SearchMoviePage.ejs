@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>SearchMoviePage</title>
+    <link rel='stylesheet' href='/stylesheets/StyleSearch.css' />
+
+  </head>
+
+
+  <body>
+<div class="page">
+    <h1>Search a Movie Page</h1><br/>
+    <h3>please search a movie:</h3>
+    <form action="/SearchResultPage" method="post">
+      Movie Name:<input type="text" required name="moviename">
+      language:
+      <select required name="language">
+        <option></option>
+        <option>Hebrew</option>
+        <option>English</option>
+        <option>Spanish</option>
+        <option>France</option>
+        <option>Russion</option>
+      </select>
+      genres:
+      <select required name="genres">
+        <option></option>
+        <option>Comedy</option>
+        <option>Family</option>
+        <option>Drama</option>
+        <option>Action</option>
+        <option>Crime</option>
+        <option>Science-Fiction</option>
+        <option>Thriller</option>
+        <option>Adventure</option>
+        <option>Music</option>
+      </select><br/><br/>
+      <input type="submit" name="send"><br/>
+
+    </form>
+
+  </div>
+  </body>
+</html>

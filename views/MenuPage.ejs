@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>MenuPage</title>
+  <link rel='stylesheet' href='/stylesheets/StyleMenu.css' />
+
+</head>
+
+
+<body>
+  <div class="page">
+    <h1>MENU PAGE</h1><br />
+    <h3>
+      <%= user.user.Username %> Welcome to the menu page, please select your move:
+    </h3><br /><br />
+    <div class="menuRoler">
+      <a href="/SearchMoviePage">Search for movies</a>
+      <a href="/CreateNewMoviePage">Create new movie</a>
+      <% if(user.admin){ %>
+        <a href="/UserManagementPage">Manager Page</a><br />
+        <% } %><br /><br />
+    </div>
+    <% if(user.createMovie){ %>
+      <h2>
+        <%= user.createMovie %>
+      </h2>
+      <% } %>
+
+  </div>
+</body>
+
+</html>

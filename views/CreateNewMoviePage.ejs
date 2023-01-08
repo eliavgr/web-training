@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>CreateMoviePage</title>
+    <link rel='stylesheet' href='/stylesheets/StyleCreate.css' />
+
+  </head>
+
+
+  <body>
+    <div class="page">
+      <h1>Create a New Movie Page</h1><br/>
+      <h3>Welcome to the creating movies page, please write the ditales of the movie:</h3>
+      <form action="/MenuPage" method="post">
+          Movie Name:<input required type="text" name="moviename">
+          language:<br/>
+        <select required name="language">
+          <option></option>
+          <option>Hebrew</option>
+          <option>English</option>
+          <option>Spanish</option>
+          <option>France</option>
+          <option>Russion</option>
+        </select>
+          genres:<br/>
+          <select required multiple name="genres">
+            <option></option>
+            <option>Comedy</option>
+            <option>Family</option>
+            <option>Drama</option>
+            <option>Action</option>
+            <option>Crime</option>
+            <option>Science-Fiction</option>
+            <option>Thriller</option>
+            <option>Adventure</option>
+            <option>Music</option>
+          </select>
+          URL:<input required type="text" name="url">
+          <input type="submit" name="submit">
+      </form>
+      <div class="backMenu">
+        <a href="/MenuPage">back to menu</a>
+      </div>
+
+  
+  </div>
+  </body>
+</html>

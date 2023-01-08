@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>SearchResultPage</title>
+  <link rel='stylesheet' href='/stylesheets/StyleResult.css' />
+
+</head>
+
+
+<body>
+
+  <h1>Search a Movie Result Page</h1><br />
+  <table>
+    <tr>
+        <td>
+          <h4>the movie</h4>
+        </td>
+        <td>
+          <h4>movies with same genres</h4>
+        </td>
+    </tr>
+    <tr>
+      <td>
+        <% if(movieName=="notSameLanguage" ) { %>
+          <p>the movie not found with similer language</p>
+        <% } else if(movieName=="notSameName" ) { %>
+          <P>not found a movie with this name</P>
+        <% } else if(movieName=="notSameGenres" ) { %>
+          <P>the movie not found with this genres</P>
+        <% } else if(movieName=="notSameGenresAndLanguage" ) { %>
+          <P>the movie not found with this Genres and the Language</P>
+        <% } else { %>
+          <a href="/MoviePage/<%= movieName.id %>"><%= movieName.name %></a>
+          <% } %>
+      </td>
+
+        <td>
+          <ul>
+            <% if(moviesGenres !="notGenres" ) { moviesGenres.slice(0,10).forEach(function(movie){ %>
+              <li><a href="/MoviePage/<%= movie.id %>">
+                  <%= movie.name %>
+                </a></li>
+              <% }) } else{ %>
+                <p>not found movies in this genres!</p>
+                <% } %>
+          </ul>
+        </td>
+    </tr>
+  </table><br /><br />
+  <div class="backMenu">
+    <a href="/MenuPage">back to menu</a>
+  </div>
+
+
+</body>
+
+</html>

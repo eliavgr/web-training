@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>EditUsers</title>
+    <link rel='stylesheet' href='/stylesheets/StyleUser.css' />
+
+  </head>
+
+
+  <body>
+  <div class="page">
+    <h1>Edit Users Page</h1><br/>
+    <h4>Welcome to the edit/update users page, this page its only for the admin user:</h4>
+    <form action="/UserManagementPage" method="post">
+        User Name:<input type="text" required name="username" value="<%= user.Username %>"><br/>
+        password:<input type="password" required value="<%= user.Password %>" name="password"><br/>
+        created date:<input type="date" required  value="<%= user.CreateDate %>" name="date"><br/>
+        transactions:<input type="text" required value="<%= user.NumTransactions %>" name="transactions" ><br/>
+        <input type="submit" value="submit"><br/>
+    </form>
+    <% if(user.err){ %>
+      <p><%= user.err %></p>
+   <% } %>
+   <div class="backLinks">
+    <a href="/MenuPage">back to menu</a>
+    <a href="/MUserManagerPage">back to manager page</a>
+  </div>
+
+    
+  </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>UserManagementPage</title>
+    <link rel='stylesheet' href='/stylesheets/StyleManager.css' />
+
+  </head>
+
+
+  <body>
+<div class="Page">
+    <h1>User Management Page</h1><br/>
+    <h4>Welcome to the management page, only for admin:</h4>
+    <div class="editUser">
+    <a href="/EditUsers">add new user</a>
+  </div>
+    <h3>users ditales:</h3>
+    <ul>
+      <% Users.forEach(function(user){ %>
+        <li><%= user.Username %></li>
+        <a href="/EditUsers/delete?user=<%= user.id %>" data-method="delete">delete</a>
+        <a href="/EditUsers/update?user=<%= user.id %>"  data-method="put">update</a>
+      <% }) %>
+    </ul>
+  <div class="backMenu">
+    <a href="/MenuPage">back to menu</a>
+  </div>
+
+  </div>
+  </body>
+</html>
